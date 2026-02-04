@@ -15,16 +15,16 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
-# #checl for when im using this on a XPS laptop
-# # Set laptop panel resolution safely on this machine only
-# exec_always --no-startup-id sh -c '\
-# command -v xrandr >/dev/null 2>&1 || exit 0; \
-# if xrandr | grep -q "^eDP-1 connected"; then \
-#     xrandr --output eDP-1 --mode 1920x1200 --rate 60; \
-# fi \
-# '
-# #adds tap to click to click on XPS laptop
-# exec_always --no-startup-id xinput set-prop "DLL0945:00 04F3:311C Touchpad" "libinput Tapping Enabled" 1
+#checl for when im using this on a XPS laptop
+# Set laptop panel resolution safely on this machine only
+exec_always --no-startup-id sh -c '\
+command -v xrandr >/dev/null 2>&1 || exit 0; \
+if xrandr | grep -q "^eDP-1 connected"; then \
+    xrandr --output eDP-1 --mode 1920x1200 --rate 60; \
+fi \
+'
+#adds tap to click to click on XPS laptop
+exec_always --no-startup-id xinput set-prop "DLL0945:00 04F3:311C Touchpad" "libinput Tapping Enabled" 1
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
