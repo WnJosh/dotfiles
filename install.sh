@@ -3,7 +3,7 @@ set -e
 
 echo "Installing packages"
 sudo apt update
-sudo apt install -y vim i3 i3blocks git pavucontrol blueman nautilus
+sudo apt install -y vim i3 i3blocks git pavucontrol blueman nautilus feh
 
 echo "Creating directories"
 mkdir -p ~/.config/i3 ~/.config/i3blocks    #Directory for i3 
